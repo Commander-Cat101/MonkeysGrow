@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>MonkeysGrow</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>MonkeysGrow</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="API\Assets\1.png" />
+      <None Remove="API\Assets\2.png" />
+      <None Remove="API\Assets\3.png" />
+      <None Remove="API\Assets\4.png" />
+      <None Remove="API\Assets\5.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include=".github\workflows\build.yml" />
+    </ItemGroup>
+
+    <Import Project="..\btd6.targets" />
+
+	<ItemGroup>
+		<Reference Include="PathsPlusPlus">
+			<HintPath>$(BloonsTD6)\Mods\PathsPlusPlus.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
